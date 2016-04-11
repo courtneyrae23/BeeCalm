@@ -1,5 +1,8 @@
-# Group-22-Project
-Group 22 Project
+# application Name
+BeeCalm
+
+# Group Name
+WeCare
 
 #Problem and Solution Overview
 Anxiety disorders are the most common mental illness in the U.S., affecting 40 million adults in the United States age 18 and older, or 18% of the population. (Source: National Institute of Mental Health) Our Android mobile and wear application is aiming to help people who are experiencing a panic attack to overcome it. Because when someone is suffering from a panic attack, he or she becomes very anxious and it is hard to think clearly and rationally, it’s important to make our application concise and easy to use. Our app will fulfill this task mainly through three ways : 1. Help the person disconnect from their panic-inducing situation by guiding him or her to repeat a simple, physically-focused task. 2. Help slow the person’s breathing by guiding him or her to follow a breathing rhythm. 3. Take focus away from the panicked thoughts by playing soft music or encouraging audio. 
@@ -16,8 +19,8 @@ Anxiety disorders are the most common mental illness in the U.S., affecting 40 m
 A mobile app filled with resources for people suffering from panic attacks and information about each of the resources, with a button on the main page if the user is currently experiencing an attack. This button would pull up swipe-able resources on the watch for the user to use discreetly, but effectively. The mobile part of this app will also feature documentation on each resource and more in-depth instructions on how to use each one and why each is effective. The app will also include more general anxiety-combatting information, in an attempt to help the root of the problem, not just a symptom.
 
 #Group Mumbers
-Zhuosi Wang
-Fendy Soegiono
-Stephanie Lin
-Courtney Pasco
-Ilakya Palanisamy
+Zhuosi Wang     
+Fendy Soegiono     
+Stephanie Lin      
+Courtney Pasco      
+Ilakya Palanisamy     
