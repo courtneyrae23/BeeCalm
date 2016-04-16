@@ -80,17 +80,20 @@ public class SideBarActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_setting) {
+            // Handle the setting action
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_breathing) {
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_mantras) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_simon) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_biofeedback) {
+
+        } else if (id == R.id.nav_tapping) {
+
+        } else if (id == R.id.nav_contacts) {
 
         }
 
