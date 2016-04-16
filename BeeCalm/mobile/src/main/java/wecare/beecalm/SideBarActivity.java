@@ -1,5 +1,6 @@
 package wecare.beecalm;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -81,8 +82,8 @@ public class SideBarActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_setting) {
-            // Handle the setting action
-
+            Intent intent = new Intent(this, SettingActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_breathing) {
 
         } else if (id == R.id.nav_mantras) {
