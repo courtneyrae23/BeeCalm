@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -17,12 +19,16 @@ import android.view.MenuItem;
 public class SideBarActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private boolean viewIsAtHome;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_side_bar);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        displayView(R.id.nav_breathing);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -48,10 +54,14 @@ public class SideBarActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+        }
+        if (!viewIsAtHome) { //if the current view is not the News fragment
+            displayView(R.id.nav_breathing); //display the News fragment
         } else {
-            super.onBackPressed();
+            moveTaskToBack(true);  //If view is in News fragment, exit application
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -79,27 +89,62 @@ public class SideBarActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
-        int id = item.getItemId();
+//        int id = item.getItemId();
+//
+//        if (id == R.id.nav_setting) {
+//            Intent intent = new Intent(this, SettingActivity.class);
+//            startActivity(intent);
+//        } else if (id == R.id.nav_breathing) {
+//
+//        } else if (id == R.id.nav_mantras) {
+//
+//        } else if (id == R.id.nav_simon) {
+//
+//        } else if (id == R.id.nav_biofeedback) {
+//
+//        } else if (id == R.id.nav_tapping) {
+//
+//        } else if (id == R.id.nav_contacts) {
+//
+//        }
+//
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        drawer.closeDrawer(GravityCompat.START);
+        displayView(item.getItemId());
+        return true;
+    }
 
-        if (id == R.id.nav_setting) {
-            Intent intent = new Intent(this, SettingActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_breathing) {
+    public void displayView(int viewId) {
 
-        } else if (id == R.id.nav_mantras) {
+        Fragment fragment = null;
+        String title = getString(R.string.app_name);
 
-        } else if (id == R.id.nav_simon) {
+        switch (viewId) {
+            case R.id.nav_setting:
+                fragment = new SettingFragment();
+                title  = "Setting";
+                viewIsAtHome = false;
+                break;
+            case R.id.nav_breathing:
+                fragment = new BreathingFragment();
+                title  = "Breathing";
+                viewIsAtHome = true;
+                break;
+        }
 
-        } else if (id == R.id.nav_biofeedback) {
+        if (fragment != null) {
+            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_frame, fragment);
+            ft.commit();
+        }
 
-        } else if (id == R.id.nav_tapping) {
-
-        } else if (id == R.id.nav_contacts) {
-
+        // set the toolbar title
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(title);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
-        return true;
+
     }
 }

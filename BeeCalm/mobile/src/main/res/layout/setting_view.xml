@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="This is the setting activity, Fendy will be responsible of implementing this page"
+        android:text="This is the setting view, Fendy will be responsible of implementing this page"
         android:id="@+id/textView"
         android:layout_gravity="center_horizontal" />
 </LinearLayout>
