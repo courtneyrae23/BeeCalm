@@ -70,46 +70,9 @@ public class SideBarActivity extends AppCompatActivity
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-//        int id = item.getItemId();
-//
-//        if (id == R.id.nav_setting) {
-//            Intent intent = new Intent(this, SettingActivity.class);
-//            startActivity(intent);
-//        } else if (id == R.id.nav_breathing) {
-//
-//        } else if (id == R.id.nav_mantras) {
-//
-//        } else if (id == R.id.nav_simon) {
-//
-//        } else if (id == R.id.nav_biofeedback) {
-//
-//        } else if (id == R.id.nav_tapping) {
-//
-//        } else if (id == R.id.nav_contacts) {
-//
-//        }
-//
-//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-//        drawer.closeDrawer(GravityCompat.START);
         displayView(item.getItemId());
         return true;
     }
@@ -129,6 +92,16 @@ public class SideBarActivity extends AppCompatActivity
                 fragment = new BreathingFragment();
                 title  = "Breathing";
                 viewIsAtHome = true;
+                break;
+            case R.id.nav_mantras:
+                fragment = new MantrasFragment();
+                title  = "Mantras";
+                viewIsAtHome = false;
+                break;
+            case R.id.nav_simon:
+                fragment = new SimonFragment();
+                title  = "Simon Swipe";
+                viewIsAtHome = false;
                 break;
         }
 
