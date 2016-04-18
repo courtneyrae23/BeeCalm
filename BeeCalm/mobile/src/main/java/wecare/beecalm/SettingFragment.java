@@ -9,6 +9,7 @@ import android.support.v4.util.Pair;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
+import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +25,7 @@ public class SettingFragment extends Fragment {
     private ArrayList<Pair<Long, String>> mItemArray;
     private DragListView mDragListView;
     private MySwipeRefreshLayout mRefreshLayout;
+//    private MySwipeRefreshLayout mRefreshLayout = new MySwipeRefreshLayout(getContext());
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -108,5 +110,47 @@ public class SettingFragment extends Fragment {
             dragView.setBackgroundColor(dragView.getResources().getColor(R.color.list_item_background));
         }
     }
+
+    class MySwipeRefreshLayout extends SwipeRefreshLayout {
+        private View mScrollingView;
+
+        public MySwipeRefreshLayout(Context context) {
+            super(context);
+        }
+
+        public MySwipeRefreshLayout(Context context, AttributeSet attrs) {
+            super(context, attrs);
+        }
+
+        @Override
+        public boolean canChildScrollUp() {
+            return mScrollingView != null;
+        }
+
+        public void setScrollingView(View scrollingView) {
+            mScrollingView = scrollingView;
+        }
+    }
+
+//    public class MySwipeRefreshLayout extends SwipeRefreshLayout {
+//        private View mScrollingView;
+//
+//        public MySwipeRefreshLayout(Context context) {
+//            super(context);
+//        }
+//
+//        public MySwipeRefreshLayout(Context context, AttributeSet attrs) {
+//            super(context, attrs);
+//        }
+//
+//        @Override
+//        public boolean canChildScrollUp() {
+//            return mScrollingView != null;
+//        }
+//
+//        public void setScrollingView(View scrollingView) {
+//            mScrollingView = scrollingView;
+//        }
+//    }
 }
 
