@@ -52,17 +52,8 @@ public class ItemAdapter extends DragItemAdapter<Pair<Long, String>, ItemAdapter
 //                    v.getContext().startActivity(intent);
 //                }
 //            });
-        } else if (mItemList.get(position).second == "Audio Coach") {
-            img_id.get(3).setImageResource(R.mipmap.arrow_right);
-//            img_id.get(3).setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent = new Intent(v.getContext(), MantrasActivity.class);
-//                    v.getContext().startActivity(intent);
-//                }
-//            });
         } else if (mItemList.get(position).second == "Contact List") {
-            img_id.get(7).setImageResource(R.mipmap.arrow_right);
+            img_id.get(5).setImageResource(R.mipmap.arrow_right);
 //            img_id.get(7).setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {

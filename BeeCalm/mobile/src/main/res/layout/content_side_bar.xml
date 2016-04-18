@@ -10,10 +10,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="wecare.beecalm.SideBarActivity"
-    tools:showIn="@layout/app_bar_side_bar">
+    tools:showIn="@layout/app_bar_side_bar"
+    android:background="#FFFEEC">
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" android:id="@+id/content_frame"/>
+        android:layout_height="match_parent" android:id="@+id/content_frame"
+        android:background="#FFFEEC" />
 
 </RelativeLayout>

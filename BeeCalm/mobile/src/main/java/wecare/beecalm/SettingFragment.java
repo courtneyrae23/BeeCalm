@@ -1,11 +1,9 @@
 package wecare.beecalm;
 
 import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.util.Pair;
 import android.support.v4.widget.SwipeRefreshLayout;
@@ -35,7 +33,7 @@ public class SettingFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.list_layout, container, false);
+        View view = inflater.inflate(R.layout.setting_view, container, false);
         mRefreshLayout = (MySwipeRefreshLayout) view.findViewById(R.id.swipe_refresh_layout);
         mDragListView = (DragListView) view.findViewById(R.id.drag_list_view);
         mDragListView.getRecyclerView().setVerticalScrollBarEnabled(true);
@@ -52,18 +50,12 @@ public class SettingFragment extends Fragment {
                     mItemArray.add(new Pair<>(Long.valueOf(i), "Simon Swipe"));
                     break;
                 case 3:
-                    mItemArray.add(new Pair<>(Long.valueOf(i), "Audio Coach"));
-                    break;
-                case 4:
                     mItemArray.add(new Pair<>(Long.valueOf(i), "Biofeedback"));
                     break;
-                case 5:
+                case 4:
                     mItemArray.add(new Pair<>(Long.valueOf(i), "Tapping"));
                     break;
-                case 6:
-                    mItemArray.add(new Pair<>(Long.valueOf(i), "Yoga"));
-                    break;
-                case 7:
+                case 5:
                     mItemArray.add(new Pair<>(Long.valueOf(i), "Contact List"));
                     break;
             }
@@ -97,10 +89,10 @@ public class SettingFragment extends Fragment {
 
     private void setupListRecyclerView() {
         mDragListView.setLayoutManager(new LinearLayoutManager(getContext()));
-        ItemAdapter listAdapter = new ItemAdapter(mItemArray, R.layout.list_item, R.id.image, false);
+        ItemAdapter listAdapter = new ItemAdapter(mItemArray, R.layout.setting_item, R.id.image, false);
         mDragListView.setAdapter(listAdapter, true);
         mDragListView.setCanDragHorizontally(false);
-        mDragListView.setCustomDragItem(new MyDragItem(getContext(), R.layout.list_item));
+        mDragListView.setCustomDragItem(new MyDragItem(getContext(), R.layout.setting_item));
     }
 
     private static class MyDragItem extends DragItem {
@@ -117,3 +109,4 @@ public class SettingFragment extends Fragment {
         }
     }
 }
+
