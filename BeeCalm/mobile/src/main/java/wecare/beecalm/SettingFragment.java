@@ -108,20 +108,14 @@ public class SettingFragment extends Fragment {
             CharSequence text = ((TextView) clickedView.findViewById(R.id.text)).getText();
             CharSequence drag = ((TextView) dragView.findViewById(R.id.text)).getText();
             ((TextView) dragView.findViewById(R.id.text)).setText(text);
-            System.out.println(text);
-            System.out.println("********************************");
-            System.out.println(drag);
             ImageView img = (ImageView) dragView.findViewById(R.id.imageView);
             if (text == "Mantras") {
-                System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^");
                 img.setImageResource(R.mipmap.arrow_right);
                 img .setVisibility(View.VISIBLE);
             } else if (text == "Contact List") {
-                System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&");
                 img.setImageResource(R.mipmap.arrow_right);
                 img.setVisibility(View.VISIBLE);
             } else {
-                System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$");
                 img.setVisibility(View.GONE);
             }
             dragView.setBackgroundColor(dragView.getResources().getColor(R.color.list_item_background));
