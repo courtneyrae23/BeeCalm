@@ -1,21 +1,8 @@
+package wecare.beecalm;
+
 /**
- * Copyright 2014 Magnus Woxblom
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * Created by fendyzhou on 4/17/16.
  */
-
-package com.woxthebox.draglistview.sample;
-
 import android.support.v4.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,31 +45,31 @@ public class ItemAdapter extends DragItemAdapter<Pair<Long, String>, ItemAdapter
         holder.itemView.setTag(text);
         if (mItemList.get(position).second == "Mantras") {
             img_id.get(1).setImageResource(R.mipmap.arrow_right);
-            img_id.get(1).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(), MantrasActivity.class);
-                    v.getContext().startActivity(intent);
-                }
-            });
+//            img_id.get(1).setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(v.getContext(), SideBarActivity.class);
+//                    v.getContext().startActivity(intent);
+//                }
+//            });
         } else if (mItemList.get(position).second == "Audio Coach") {
             img_id.get(3).setImageResource(R.mipmap.arrow_right);
-            img_id.get(3).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(), MantrasActivity.class);
-                    v.getContext().startActivity(intent);
-                }
-            });
+//            img_id.get(3).setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(v.getContext(), MantrasActivity.class);
+//                    v.getContext().startActivity(intent);
+//                }
+//            });
         } else if (mItemList.get(position).second == "Contact List") {
             img_id.get(7).setImageResource(R.mipmap.arrow_right);
-            img_id.get(7).setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(), MantrasActivity.class);
-                    v.getContext().startActivity(intent);
-                }
-            });
+//            img_id.get(7).setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(v.getContext(), MantrasActivity.class);
+//                    v.getContext().startActivity(intent);
+//                }
+//            });
         }
 
 

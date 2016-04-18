@@ -1,11 +1,13 @@
-package com.woxthebox.draglistview.sample;
+package wecare.beecalm;
 
 import android.content.Context;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.AttributeSet;
 import android.view.View;
-
+/**
+ * Created by fendyzhou on 4/17/16.
+ */
 public class MySwipeRefreshLayout extends SwipeRefreshLayout {
     private View mScrollingView;
 
