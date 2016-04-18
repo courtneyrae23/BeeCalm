@@ -94,6 +94,16 @@ public class SideBarActivity extends AppCompatActivity
                 title  = "Simon Swipe";
                 viewIsAtHome = false;
                 break;
+            case R.id.nav_yoga:
+             //   fragment = new YogaFragment();
+                title  = "Yoga";
+                viewIsAtHome = false;
+                break;
+            case R.id.nav_acupuncture:
+                //   fragment = new AcupunctureFragment();
+                title  = "Acupuncture";
+                viewIsAtHome = false;
+                break;
         }
 
         if (fragment != null) {

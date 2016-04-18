@@ -19,17 +19,14 @@
             android:icon="@mipmap/ic_simon"
             android:title="Simon Swipe" />
         <item
-            android:id="@+id/nav_biofeedback"
-            android:icon="@mipmap/ic_biofeedback"
-            android:title="Biofeedback" />
+            android:id="@+id/nav_yoga"
+            android:icon="@mipmap/ic_yoga"
+            android:title="Yoga" />
         <item
-            android:id="@+id/nav_tapping"
-            android:icon="@mipmap/ic_tapping"
-            android:title="Tapping" />
-        <item
-            android:id="@+id/nav_contacts"
-            android:icon="@mipmap/ic_contacts"
-            android:title="My Contacts" />
+            android:id="@+id/nav_acupuncture"
+            android:icon="@mipmap/ic_acupuncture"
+            android:title="Acupuncture" />
+
     </group>
 
 </menu>
