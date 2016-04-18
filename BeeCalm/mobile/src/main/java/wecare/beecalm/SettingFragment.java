@@ -111,8 +111,10 @@ public class SettingFragment extends Fragment {
             ImageView img = (ImageView) dragView.findViewById(R.id.imageView);
             if (text == "Mantras") {
                 img.setImageResource(R.mipmap.arrow_right);
+                img .setVisibility(View.VISIBLE);
             } else if (text == "Contact List") {
                 img.setImageResource(R.mipmap.arrow_right);
+                img.setVisibility(View.VISIBLE);
             } else {
                 img.setVisibility(View.GONE);
             }
