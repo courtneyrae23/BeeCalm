@@ -13,6 +13,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.woxthebox.draglistview.DragItem;
@@ -25,7 +26,6 @@ public class SettingFragment extends Fragment {
     private ArrayList<Pair<Long, String>> mItemArray;
     private DragListView mDragListView;
     private MySwipeRefreshLayout mRefreshLayout;
-//    private MySwipeRefreshLayout mRefreshLayout = new MySwipeRefreshLayout(getContext());
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -106,7 +106,16 @@ public class SettingFragment extends Fragment {
         @Override
         public void onBindDragView(View clickedView, View dragView) {
             CharSequence text = ((TextView) clickedView.findViewById(R.id.text)).getText();
+            CharSequence drag = ((TextView) dragView.findViewById(R.id.text)).getText();
             ((TextView) dragView.findViewById(R.id.text)).setText(text);
+            ImageView img = (ImageView) dragView.findViewById(R.id.imageView);
+            if (text == "Mantras") {
+                img.setImageResource(R.mipmap.arrow_right);
+            } else if (text == "Contact List") {
+                img.setImageResource(R.mipmap.arrow_right);
+            } else {
+                img.setVisibility(View.GONE);
+            }
             dragView.setBackgroundColor(dragView.getResources().getColor(R.color.list_item_background));
         }
     }
