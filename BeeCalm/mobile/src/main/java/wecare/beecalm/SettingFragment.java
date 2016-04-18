@@ -111,46 +111,25 @@ public class SettingFragment extends Fragment {
         }
     }
 
-    class MySwipeRefreshLayout extends SwipeRefreshLayout {
-        private View mScrollingView;
-
-        public MySwipeRefreshLayout(Context context) {
-            super(context);
-        }
-
-        public MySwipeRefreshLayout(Context context, AttributeSet attrs) {
-            super(context, attrs);
-        }
-
-        @Override
-        public boolean canChildScrollUp() {
-            return mScrollingView != null;
-        }
-
-        public void setScrollingView(View scrollingView) {
-            mScrollingView = scrollingView;
-        }
-    }
-
-//    public class MySwipeRefreshLayout extends SwipeRefreshLayout {
-//        private View mScrollingView;
-//
-//        public MySwipeRefreshLayout(Context context) {
-//            super(context);
-//        }
-//
-//        public MySwipeRefreshLayout(Context context, AttributeSet attrs) {
-//            super(context, attrs);
-//        }
-//
-//        @Override
-//        public boolean canChildScrollUp() {
-//            return mScrollingView != null;
-//        }
-//
-//        public void setScrollingView(View scrollingView) {
-//            mScrollingView = scrollingView;
-//        }
-//    }
 }
 
+class MySwipeRefreshLayout extends SwipeRefreshLayout {
+    private View mScrollingView;
+
+    public MySwipeRefreshLayout(Context context) {
+        super(context);
+    }
+
+    public MySwipeRefreshLayout(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    public boolean canChildScrollUp() {
+        return mScrollingView != null;
+    }
+
+    public void setScrollingView(View scrollingView) {
+        mScrollingView = scrollingView;
+    }
+}
