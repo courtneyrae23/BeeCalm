@@ -1,11 +1,11 @@
-# application Name
+# Application Name
 BeeCalm
 
 # Group Name
 WeCare
 
-#Problem and Solution Overview
-Anxiety disorders are the most common mental illness in the U.S., affecting 40 million adults in the United States age 18 and older, or 18% of the population. (Source: National Institute of Mental Health) Our Android mobile and wear application is aiming to help people who are experiencing a panic attack to overcome it. Because when someone is suffering from a panic attack, he or she becomes very anxious and it is hard to think clearly and rationally, it’s important to make our application concise and easy to use. Our app will fulfill this task mainly through three ways : 1. Help the person disconnect from their panic-inducing situation by guiding him or her to repeat a simple, physically-focused task. 2. Help slow the person’s breathing by guiding him or her to follow a breathing rhythm. 3. Take focus away from the panicked thoughts by playing soft music or encouraging audio. 
+# Problem and Solution Overview
+Anxiety disorders are the most common mental illness in the U.S., affecting 40 million adults in the United States ages 18 and older, or 18% of the population. (Source: National Institute of Mental Health) Our Android mobile and wear application is aiming to help people who are experiencing a panic attack to overcome it. When someone is suffering from a panic attack, they become very anxious and find it hard to think clearly and rationally, which makes it important that our application is concise and easy to use. Our app will fulfill this in three ways : 1. Help the person disconnect from their panic-inducing situation by guiding him or her to repeat a simple, physically-focused task. 2. Help slow the person’s breathing by guiding him or her to follow a breathing rhythm. 3. Take focus away from the panicked thoughts by playing soft music or encouraging audio. 
 
 #Top 5 User needs
 1. Get breathing under control -- this is the easiest way to help calm down from an adrenaline rush.  As the second user put it, “It is impossible to be both physically relaxed and physically anxious at the same time.”  We were thinking of having a clock that ticked out the number of seconds to breathe in and breathe out, but the second user also suggested a timed animation of a balloon inflating and deflating to give a more compelling visual experience.
