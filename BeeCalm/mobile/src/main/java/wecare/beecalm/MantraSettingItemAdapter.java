@@ -3,6 +3,7 @@ package wecare.beecalm;
 /**
  * Created by fendyzhou on 4/17/16.
  */
+import android.content.Intent;
 import android.support.v4.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,13 +58,13 @@ public class MantraSettingItemAdapter extends DragItemAdapter<Pair<Long, String>
 //            });
         } else if (mItemList.get(position).second == "This too, will pass.") {
             img_id.get(1).setImageResource(R.mipmap.blackarrow);
-//            img_id.get(7).setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent = new Intent(v.getContext(), MantrasActivity.class);
-//                    v.getContext().startActivity(intent);
-//                }
-//            });
+            img_id.get(1).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), MantraSettingStep1Activity.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
         } else if (mItemList.get(position).second == "It's okay to feel anxious.") {
             img_id.get(2).setImageResource(R.mipmap.blackarrow);
 //            img_id.get(7).setOnClickListener(new View.OnClickListener() {
