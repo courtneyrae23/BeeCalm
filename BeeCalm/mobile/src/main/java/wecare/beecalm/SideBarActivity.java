@@ -86,12 +86,12 @@ public class SideBarActivity extends AppCompatActivity
                 viewIsAtHome = false;
                 break;
             case R.id.nav_yoga:
-             //   fragment = new YogaFragment();
+                fragment = new YogaFragment();
                 title  = "Yoga";
                 viewIsAtHome = false;
                 break;
             case R.id.nav_tapping_points:
-                //   fragment = new TappingPointsFragment();
+                fragment = new TappingPointsFragment();
                 title  = "Tapping Points";
                 viewIsAtHome = false;
                 break;

@@ -8,7 +8,7 @@ import android.widget.ImageView;
 /**
  * Created by Zhuosi on 4/20/16.
  */
-public class TappingPointsActivity extends Activity {
+public class TappingPointsSettingActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

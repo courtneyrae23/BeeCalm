@@ -66,7 +66,7 @@ public class ItemAdapter extends DragItemAdapter<Pair<Long, String>, ItemAdapter
             img_id.get(5).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(v.getContext(), TappingPointsActivity.class);
+                    Intent intent = new Intent(v.getContext(), TappingPointsSettingActivity.class);
                     v.getContext().startActivity(intent);
                 }
             });
