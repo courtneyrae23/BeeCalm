@@ -21,11 +21,11 @@ import com.woxthebox.draglistview.DragListView;
 
 import java.util.ArrayList;
 
-public class SettingFragment extends Fragment {
+public class MantraSettings extends Fragment {
 
     private ArrayList<Pair<Long, String>> mItemArray;
     private DragListView mDragListView;
-    private MySwipeRefreshLayout mRefreshLayout;
+    private MantraSettingsSwipeRefreshLayout mRefreshLayout;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,36 +35,33 @@ public class SettingFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.setting_view, container, false);
-        mRefreshLayout = (MySwipeRefreshLayout) view.findViewById(R.id.swipe_refresh_layout);
-        mDragListView = (DragListView) view.findViewById(R.id.drag_list_view);
+        View view = inflater.inflate(R.layout.mantra_setting_view, container, false);
+        mRefreshLayout = (MantraSettingsSwipeRefreshLayout) view.findViewById(R.id.mantra_setting_swipe_refresh_layout);
+        mDragListView = (DragListView) view.findViewById(R.id.mantra_setting_drag_list_view);
         mDragListView.getRecyclerView().setVerticalScrollBarEnabled(true);
         mItemArray = new ArrayList<>();
         for (int i = 0; i < 8; i++) {
             switch(i) {
                 case 0:
-                    mItemArray.add(new Pair<>(Long.valueOf(i), "Biofeedback (Watch Only)"));
+                    mItemArray.add(new Pair<>(Long.valueOf(i), "Ride this wave."));
                     break;
                 case 1:
-                    mItemArray.add(new Pair<>(Long.valueOf(i), "Breathing"));
+                    mItemArray.add(new Pair<>(Long.valueOf(i), "This too, will pass."));
                     break;
                 case 2:
-                    mItemArray.add(new Pair<>(Long.valueOf(i), "Mantras"));
+                    mItemArray.add(new Pair<>(Long.valueOf(i), "It's okay to feel anxious."));
                     break;
                 case 3:
-                    mItemArray.add(new Pair<>(Long.valueOf(i), "Simon Swipe"));
+                    mItemArray.add(new Pair<>(Long.valueOf(i), "Don't let a bad day scare..."));
                     break;
                 case 4:
-                    mItemArray.add(new Pair<>(Long.valueOf(i), "Yoga"));
-                    break;
-                case 5:
-                    mItemArray.add(new Pair<>(Long.valueOf(i), "Tapping Points"));
+                    mItemArray.add(new Pair<>(Long.valueOf(i), "Add Mantra"));
                     break;
             }
         }
 
 
-        mRefreshLayout.setScrollingView(mDragListView.getRecyclerView());
+        mRefreshLayout.setMantraScrollingView(mDragListView.getRecyclerView());
         mRefreshLayout.setColorSchemeColors(ContextCompat.getColor(getContext(), R.color.app_color));
         mRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -86,15 +83,15 @@ public class SettingFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Settings");
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle("Mantra Settings");
     }
 
     private void setupListRecyclerView() {
         mDragListView.setLayoutManager(new LinearLayoutManager(getContext()));
-        ItemAdapter listAdapter = new ItemAdapter(mItemArray, R.layout.setting_item, R.id.image, false);
+        MantraSettingItemAdapter listAdapter = new MantraSettingItemAdapter(mItemArray, R.layout.mantra_setting_item, R.id.image, false);
         mDragListView.setAdapter(listAdapter, true);
         mDragListView.setCanDragHorizontally(false);
-        mDragListView.setCustomDragItem(new MyDragItem(getContext(), R.layout.setting_item));
+        mDragListView.setCustomDragItem(new MyDragItem(getContext(), R.layout.mantra_setting_item));
     }
 
     private static class MyDragItem extends DragItem {
@@ -109,16 +106,25 @@ public class SettingFragment extends Fragment {
             CharSequence drag = ((TextView) dragView.findViewById(R.id.text)).getText();
             ((TextView) dragView.findViewById(R.id.text)).setText(text);
             ImageView img = (ImageView) dragView.findViewById(R.id.imageView);
-            if (text == "Mantras") {
-                img.setImageResource(R.mipmap.blackarrow);
+            ImageView img_icon = (ImageView) dragView.findViewById(R.id.image);
+            if (text == "Ride this wave.") {
+                img.setImageResource(R.mipmap.arrow_right);
                 img .setVisibility(View.VISIBLE);
-            } else if (text == "Yoga") {
-                img.setImageResource(R.mipmap.blackarrow);
+                img_icon.setImageResource(R.mipmap.upanddownarrow);
+            } else if (text == "This too, will pass.") {
+                img.setImageResource(R.mipmap.arrow_right);
+                img_icon.setImageResource(R.mipmap.upanddownarrow);
                 img.setVisibility(View.VISIBLE);
-            } else if (text == "Tapping Points") {
-                img.setImageResource(R.mipmap.blackarrow);
+            } else if (text == "It's okay to feel anxious.") {
+                img.setImageResource(R.mipmap.arrow_right);
+                img_icon.setImageResource(R.mipmap.upanddownarrow);
                 img.setVisibility(View.VISIBLE);
+            } else if (text == "Don't let a bad day scare...") {
+                img.setImageResource(R.mipmap.arrow_right);
+                img.setVisibility(View.VISIBLE);
+                img_icon.setImageResource(R.mipmap.upanddownarrow);
             } else {
+                img_icon.setImageResource(R.mipmap.plussign);
                 img.setVisibility(View.GONE);
             }
             dragView.setBackgroundColor(dragView.getResources().getColor(R.color.list_item_background));
@@ -127,14 +133,14 @@ public class SettingFragment extends Fragment {
 
 }
 
-class MySwipeRefreshLayout extends SwipeRefreshLayout {
+class MantraSettingsSwipeRefreshLayout extends SwipeRefreshLayout {
     private View mScrollingView;
 
-    public MySwipeRefreshLayout(Context context) {
+    public MantraSettingsSwipeRefreshLayout(Context context) {
         super(context);
     }
 
-    public MySwipeRefreshLayout(Context context, AttributeSet attrs) {
+    public MantraSettingsSwipeRefreshLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
@@ -143,7 +149,7 @@ class MySwipeRefreshLayout extends SwipeRefreshLayout {
         return mScrollingView != null;
     }
 
-    public void setScrollingView(View scrollingView) {
+    public void setMantraScrollingView(View scrollingView) {
         mScrollingView = scrollingView;
     }
 }
