@@ -23,8 +23,8 @@
             android:icon="@mipmap/ic_yoga"
             android:title="Yoga" />
         <item
-            android:id="@+id/nav_acupuncture"
-            android:icon="@mipmap/ic_acupuncture"
+            android:id="@+id/nav_acupressure"
+            android:icon="@mipmap/ic_acupressure"
             android:title="Acupuncture" />
 
     </group>
