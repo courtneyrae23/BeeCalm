@@ -5,7 +5,7 @@ BeeCalm
 WeCare
 
 # Problem and Solution Overview
-Anxiety disorders are the most common mental illness in the U.S., affecting 40 million adults in the United States ages 18 and older, or 18% of the population. (Source: National Institute of Mental Health) Our Android mobile and wear application is aiming to help people who are experiencing a panic attack to overcome it. When someone is suffering from a panic attack, they become very anxious and find it hard to think clearly and rationally, which makes it important that our application is concise and easy to use. Our app will fulfill this in three ways : 1. Help the person disconnect from their panic-inducing situation by guiding him or her to repeat a simple, physically-focused task. 2. Help slow the person’s breathing by guiding him or her to follow a breathing rhythm. 3. Take focus away from the panicked thoughts by playing soft music or encouraging audio. 
+Anxiety disorders are the most common mental illness in the U.S., affecting 40 million adults in the United States ages 18 and older, or 18% of the population. (Source: National Institute of Mental Health) Our Android mobile and wear application is aiming to help people who are experiencing a panic attack to overcome it. When someone is suffering from a panic attack, they become very anxious and find it hard to think clearly and rationally, which can greatly affect their daily life. Our app will help the user get through a panic attack in three main ways: 1. Help the person disconnect from their panic-inducing situation by guiding him or her to repeat a simple, physically-focused task. 2. Help the person feel physically relaxed through the use of yoga, tapping points, or breathing exercises. 3) Help the person feel mentally calm through the use of mantras and audio. 
 
 #Top 5 User needs
 1. Get breathing under control -- this is the easiest way to help calm down from an adrenaline rush.  As the second user put it, “It is impossible to be both physically relaxed and physically anxious at the same time.”  We were thinking of having a clock that ticked out the number of seconds to breathe in and breathe out, but the second user also suggested a timed animation of a balloon inflating and deflating to give a more compelling visual experience.
@@ -18,7 +18,7 @@ Anxiety disorders are the most common mental illness in the U.S., affecting 40 m
 # Project Description
 A mobile app filled with resources for people suffering from panic attacks and information about each of the resources, with a button on the main page if the user is currently experiencing an attack. This button would pull up swipe-able resources on the watch for the user to use discreetly, but effectively. The mobile part of this app will also feature documentation on each resource and more in-depth instructions on how to use each one and why each is effective. The app will also include more general anxiety-combatting information, in an attempt to help the root of the problem, not just a symptom.
 
-#Group Mumbers
+#Group Members
 Zhuosi Wang     
 Fendy Soegiono     
 Stephanie Lin      
