@@ -54,22 +54,22 @@ public class ItemAdapter extends DragItemAdapter<Pair<Long, String>, ItemAdapter
         });
         } else if (mItemList.get(position).second == "Yoga") {
             img_id.get(4).setImageResource(R.mipmap.blackarrow);
-//            img_id.get(7).setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent = new Intent(v.getContext(), MantrasActivity.class);
-//                    v.getContext().startActivity(intent);
-//                }
-//            });
+            img_id.get(4).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), YogaSettingActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
         } else if (mItemList.get(position).second == "Tapping Points") {
             img_id.get(5).setImageResource(R.mipmap.blackarrow);
-//            img_id.get(7).setOnClickListener(new View.OnClickListener() {
-//                @Override
-//                public void onClick(View v) {
-//                    Intent intent = new Intent(v.getContext(), MantrasActivity.class);
-//                    v.getContext().startActivity(intent);
-//                }
-//            });
+            img_id.get(5).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), TappingPointsActivity.class);
+                    v.getContext().startActivity(intent);
+                }
+            });
         }
 
 
