@@ -20,34 +20,34 @@ public class BreathingFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View rootView = inflater.inflate(R.layout.breathing_view, container, false);
-        MediaController mc= new MediaController(getActivity());
-        VideoView ballonView = (VideoView)rootView.findViewById(R.id.videoview_ballon);
-
-        mc.setAnchorView(ballonView);
-        ballonView.setMediaController(mc);
-        ballonView.setVideoPath("android.resource://" + getActivity().getPackageName() + "/" + R.raw.ballon);
-        ballonView.start();
-
-        ballonView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-            }
-        });
-
-        VideoView clockView = (VideoView)rootView.findViewById(R.id.videoview_clock);
-
-        mc.setAnchorView(clockView);
-        clockView.setMediaController(mc);
-        clockView.setVideoPath("android.resource://" + getActivity().getPackageName() + "/" + R.raw.clock);
-        clockView.start();
-
-        clockView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override
-            public void onPrepared(MediaPlayer mp) {
-                mp.setLooping(true);
-            }
-        });
+//        MediaController mc= new MediaController(getActivity());
+//        VideoView ballonView = (VideoView)rootView.findViewById(R.id.videoview_ballon);
+//
+//        mc.setAnchorView(ballonView);
+//        ballonView.setMediaController(mc);
+//        ballonView.setVideoPath("android.resource://" + getActivity().getPackageName() + "/" + R.raw.ballon);
+//        ballonView.start();
+//
+//        ballonView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//            @Override
+//            public void onPrepared(MediaPlayer mp) {
+//                mp.setLooping(true);
+//            }
+//        });
+//
+//        VideoView clockView = (VideoView)rootView.findViewById(R.id.videoview_clock);
+//
+//        mc.setAnchorView(clockView);
+//        clockView.setMediaController(mc);
+//        clockView.setVideoPath("android.resource://" + getActivity().getPackageName() + "/" + R.raw.clock);
+//        clockView.start();
+//
+//        clockView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//            @Override
+//            public void onPrepared(MediaPlayer mp) {
+//                mp.setLooping(true);
+//            }
+//        });
 
         return rootView;
     }
