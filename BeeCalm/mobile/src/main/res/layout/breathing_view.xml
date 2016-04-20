@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--<ScrollView-->
-<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--android:layout_width="fill_parent"-->
-<!--android:layout_height="fill_parent">-->
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent">
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:background="#FFFEEC">
 
-        <VideoView
-            android:id="@+id/videoview_ballon"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            />
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="150pt"
+        android:layout_height="300pt"
+        android:src="@mipmap/breath_in"/>
 
-        <VideoView
-            android:layout_marginTop="100dp"
-            android:id="@+id/videoview_clock"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150pt"
+        android:layout_height="300pt"
+        android:src="@mipmap/breath_out"/>
 
     </LinearLayout>
-<!--</ScrollView>-->
+</ScrollView>
