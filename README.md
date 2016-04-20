@@ -16,7 +16,7 @@ Anxiety disorders are the most common mental illness in the U.S., affecting 40 m
 
 
 # Project Description
-A mobile app filled with resources for people suffering from panic attacks and information about each of the resources, with a button on the main page if the user is currently experiencing an attack. This button would pull up swipe-able resources on the watch for the user to use discreetly, but effectively. The mobile part of this app will also feature documentation on each resource and more in-depth instructions on how to use each one and why each is effective. The app will also include more general anxiety-combatting information, in an attempt to help the root of the problem, not just a symptom.
+A mobile app filled with resources for people suffering from panic attacks and information about each of the resources, with a button on the main page if the user is currently experiencing an attack. This button would pull up swipe-able resources on the watch for the user to use discreetly, but effectively. The mobile part of this app will also feature documentation on each resource and more in-depth instructions on how to use each one and why each is effective. The app will also include more general anxiety-combatting information, not only just a symptom but also an attempt to help the root of the problem.
 
 #Group Members
 Zhuosi Wang     
