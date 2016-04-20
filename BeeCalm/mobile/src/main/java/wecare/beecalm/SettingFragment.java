@@ -110,13 +110,13 @@ public class SettingFragment extends Fragment {
             ((TextView) dragView.findViewById(R.id.text)).setText(text);
             ImageView img = (ImageView) dragView.findViewById(R.id.imageView);
             if (text == "Mantras") {
-                img.setImageResource(R.mipmap.arrow_right);
+                img.setImageResource(R.mipmap.blackarrow);
                 img .setVisibility(View.VISIBLE);
             } else if (text == "Yoga") {
-                img.setImageResource(R.mipmap.arrow_right);
+                img.setImageResource(R.mipmap.blackarrow);
                 img.setVisibility(View.VISIBLE);
             } else if (text == "Tapping Points") {
-                img.setImageResource(R.mipmap.arrow_right);
+                img.setImageResource(R.mipmap.blackarrow);
                 img.setVisibility(View.VISIBLE);
             } else {
                 img.setVisibility(View.GONE);

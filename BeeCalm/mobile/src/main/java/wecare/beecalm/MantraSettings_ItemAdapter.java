@@ -48,7 +48,7 @@ public class MantraSettings_ItemAdapter extends DragItemAdapter<Pair<Long, Strin
         holder.mText.setText(text);
         holder.itemView.setTag(text);
         if (mItemList.get(position).second == "Ride this wave.") {
-            img_id.get(0).setImageResource(R.mipmap.arrow_right);
+            img_id.get(0).setImageResource(R.mipmap.blackarrow);
 //            img_id.get(1).setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {
@@ -57,7 +57,7 @@ public class MantraSettings_ItemAdapter extends DragItemAdapter<Pair<Long, Strin
 //                }
 //            });
         } else if (mItemList.get(position).second == "This too, will pass.") {
-            img_id.get(1).setImageResource(R.mipmap.arrow_right);
+            img_id.get(1).setImageResource(R.mipmap.blackarrow);
 //            img_id.get(7).setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {
@@ -66,7 +66,7 @@ public class MantraSettings_ItemAdapter extends DragItemAdapter<Pair<Long, Strin
 //                }
 //            });
         } else if (mItemList.get(position).second == "It's okay to feel anxious.") {
-            img_id.get(2).setImageResource(R.mipmap.arrow_right);
+            img_id.get(2).setImageResource(R.mipmap.blackarrow);
 //            img_id.get(7).setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {
@@ -75,7 +75,7 @@ public class MantraSettings_ItemAdapter extends DragItemAdapter<Pair<Long, Strin
 //                }
 //            });
         } else if (mItemList.get(position).second == "Don't let a bad day scare...") {
-            img_id.get(3).setImageResource(R.mipmap.arrow_right);
+            img_id.get(3).setImageResource(R.mipmap.blackarrow);
 //            img_id.get(7).setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {
@@ -84,7 +84,7 @@ public class MantraSettings_ItemAdapter extends DragItemAdapter<Pair<Long, Strin
 //                }
 //            });
         } else {
-            img_icon.setImageResource(R.mipmap.plus_icon);
+            img_icon.setImageResource(R.mipmap.plussign);
 //            add_mantra.setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {

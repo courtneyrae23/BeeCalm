@@ -111,21 +111,21 @@ public class MantraSettings extends Fragment {
             if (text == "Ride this wave.") {
                 img.setImageResource(R.mipmap.arrow_right);
                 img .setVisibility(View.VISIBLE);
-                img_icon.setImageResource(R.mipmap.dragdrop);
+                img_icon.setImageResource(R.mipmap.upanddownarrow);
             } else if (text == "This too, will pass.") {
                 img.setImageResource(R.mipmap.arrow_right);
-                img_icon.setImageResource(R.mipmap.dragdrop);
+                img_icon.setImageResource(R.mipmap.upanddownarrow);
                 img.setVisibility(View.VISIBLE);
             } else if (text == "It's okay to feel anxious.") {
                 img.setImageResource(R.mipmap.arrow_right);
-                img_icon.setImageResource(R.mipmap.dragdrop);
+                img_icon.setImageResource(R.mipmap.upanddownarrow);
                 img.setVisibility(View.VISIBLE);
             } else if (text == "Don't let a bad day scare...") {
                 img.setImageResource(R.mipmap.arrow_right);
                 img.setVisibility(View.VISIBLE);
-                img_icon.setImageResource(R.mipmap.dragdrop);
+                img_icon.setImageResource(R.mipmap.upanddownarrow);
             } else {
-                img_icon.setImageResource(R.mipmap.plus_icon);
+                img_icon.setImageResource(R.mipmap.plussign);
                 img.setVisibility(View.GONE);
             }
             dragView.setBackgroundColor(dragView.getResources().getColor(R.color.list_item_background));
