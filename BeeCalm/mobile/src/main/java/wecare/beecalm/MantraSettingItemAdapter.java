@@ -9,19 +9,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.content.Intent;
 
 import com.woxthebox.draglistview.DragItemAdapter;
 
 import java.util.ArrayList;
 
-public class ItemAdapter extends DragItemAdapter<Pair<Long, String>, ItemAdapter.ViewHolder> {
+public class MantraSettingItemAdapter extends DragItemAdapter<Pair<Long, String>, MantraSettingItemAdapter.ViewHolder> {
 
     private int mLayoutId;
     private int mGrabHandleId;
     private ArrayList<ImageView> img_id = new ArrayList<>();
+    private ImageView img_icon;
+//    private TextView add_mantra;
 
-    public ItemAdapter(ArrayList<Pair<Long, String>> list, int layoutId, int grabHandleId, boolean dragOnLongPress) {
+    public MantraSettingItemAdapter(ArrayList<Pair<Long, String>> list, int layoutId, int grabHandleId, boolean dragOnLongPress) {
         super(dragOnLongPress);
         mLayoutId = layoutId;
         mGrabHandleId = grabHandleId;
@@ -34,6 +35,8 @@ public class ItemAdapter extends DragItemAdapter<Pair<Long, String>, ItemAdapter
         View view = LayoutInflater.from(parent.getContext()).inflate(mLayoutId, parent, false);
         final ImageView img = (ImageView) view.findViewById(R.id.imageView);
         img_id.add(img);
+        img_icon = (ImageView) view.findViewById((R.id.image));
+//        add_mantra = (TextView) view.findViewById((R.id.text));
         return new ViewHolder(view);
     }
 
@@ -43,17 +46,17 @@ public class ItemAdapter extends DragItemAdapter<Pair<Long, String>, ItemAdapter
         String text = mItemList.get(position).second;
         holder.mText.setText(text);
         holder.itemView.setTag(text);
-        if (mItemList.get(position).second == "Mantras") {
-            img_id.get(2).setImageResource(R.mipmap.blackarrow);
-            img_id.get(2).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), MantraSettingsActivity.class);
-                v.getContext().startActivity(intent);
-            }
-        });
-        } else if (mItemList.get(position).second == "Yoga") {
-            img_id.get(4).setImageResource(R.mipmap.blackarrow);
+        if (mItemList.get(position).second == "Ride this wave.") {
+            img_id.get(0).setImageResource(R.mipmap.blackarrow);
+//            img_id.get(1).setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(v.getContext(), SideBarActivity.class);
+//                    v.getContext().startActivity(intent);
+//                }
+//            });
+        } else if (mItemList.get(position).second == "This too, will pass.") {
+            img_id.get(1).setImageResource(R.mipmap.blackarrow);
 //            img_id.get(7).setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {
@@ -61,12 +64,30 @@ public class ItemAdapter extends DragItemAdapter<Pair<Long, String>, ItemAdapter
 //                    v.getContext().startActivity(intent);
 //                }
 //            });
-        } else if (mItemList.get(position).second == "Tapping Points") {
-            img_id.get(5).setImageResource(R.mipmap.blackarrow);
+        } else if (mItemList.get(position).second == "It's okay to feel anxious.") {
+            img_id.get(2).setImageResource(R.mipmap.blackarrow);
 //            img_id.get(7).setOnClickListener(new View.OnClickListener() {
 //                @Override
 //                public void onClick(View v) {
 //                    Intent intent = new Intent(v.getContext(), MantrasActivity.class);
+//                    v.getContext().startActivity(intent);
+//                }
+//            });
+        } else if (mItemList.get(position).second == "Don't let a bad day scare...") {
+            img_id.get(3).setImageResource(R.mipmap.blackarrow);
+//            img_id.get(7).setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(v.getContext(), MantrasActivity.class);
+//                    v.getContext().startActivity(intent);
+//                }
+//            });
+        } else {
+            img_icon.setImageResource(R.mipmap.plussign);
+//            add_mantra.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Intent intent = new Intent(v.getContext(), SideBarActivity.class);
 //                    v.getContext().startActivity(intent);
 //                }
 //            });
@@ -80,7 +101,7 @@ public class ItemAdapter extends DragItemAdapter<Pair<Long, String>, ItemAdapter
         return mItemList.get(position).first;
     }
 
-    public class ViewHolder extends DragItemAdapter<Pair<Long, String>, ItemAdapter.ViewHolder>.ViewHolder {
+    public class ViewHolder extends DragItemAdapter<Pair<Long, String>, MantraSettingItemAdapter.ViewHolder>.ViewHolder {
         public TextView mText;
 
         public ViewHolder(final View itemView) {
