@@ -90,9 +90,9 @@ public class SideBarActivity extends AppCompatActivity
                 title  = "Yoga";
                 viewIsAtHome = false;
                 break;
-            case R.id.nav_acupuncture:
-                //   fragment = new AcupunctureFragment();
-                title  = "Acupuncture";
+            case R.id.nav_tapping_points:
+                //   fragment = new TappingPointsFragment();
+                title  = "Tapping Points";
                 viewIsAtHome = false;
                 break;
         }
