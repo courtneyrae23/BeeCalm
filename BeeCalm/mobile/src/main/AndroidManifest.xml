@@ -30,7 +30,7 @@
         </activity>
 
         <activity android:name=".YogaSettingActivity"/>
-        <activity android:name=".TappingPointsActivity"/>
+        <activity android:name=".TappingPointsSettingActivity"/>
         <activity android:name=".MantraSettingStep1Activity"/>
         <activity android:name=".MantraSettingStep2Activity"/>
         <activity android:name=".MantraSettingStep3Activity"/>
