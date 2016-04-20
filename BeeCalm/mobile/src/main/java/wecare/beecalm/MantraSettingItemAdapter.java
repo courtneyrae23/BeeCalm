@@ -9,13 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.content.Intent;
 
 import com.woxthebox.draglistview.DragItemAdapter;
 
 import java.util.ArrayList;
 
-public class MantraSettings_ItemAdapter extends DragItemAdapter<Pair<Long, String>, MantraSettings_ItemAdapter.ViewHolder> {
+public class MantraSettingItemAdapter extends DragItemAdapter<Pair<Long, String>, MantraSettingItemAdapter.ViewHolder> {
 
     private int mLayoutId;
     private int mGrabHandleId;
@@ -23,7 +22,7 @@ public class MantraSettings_ItemAdapter extends DragItemAdapter<Pair<Long, Strin
     private ImageView img_icon;
 //    private TextView add_mantra;
 
-    public MantraSettings_ItemAdapter(ArrayList<Pair<Long, String>> list, int layoutId, int grabHandleId, boolean dragOnLongPress) {
+    public MantraSettingItemAdapter(ArrayList<Pair<Long, String>> list, int layoutId, int grabHandleId, boolean dragOnLongPress) {
         super(dragOnLongPress);
         mLayoutId = layoutId;
         mGrabHandleId = grabHandleId;
@@ -102,7 +101,7 @@ public class MantraSettings_ItemAdapter extends DragItemAdapter<Pair<Long, Strin
         return mItemList.get(position).first;
     }
 
-    public class ViewHolder extends DragItemAdapter<Pair<Long, String>, MantraSettings_ItemAdapter.ViewHolder>.ViewHolder {
+    public class ViewHolder extends DragItemAdapter<Pair<Long, String>, MantraSettingItemAdapter.ViewHolder>.ViewHolder {
         public TextView mText;
 
         public ViewHolder(final View itemView) {

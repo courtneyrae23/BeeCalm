@@ -1,7 +1,6 @@
 package wecare.beecalm;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -89,7 +88,7 @@ public class MantraSettings extends Fragment {
 
     private void setupListRecyclerView() {
         mDragListView.setLayoutManager(new LinearLayoutManager(getContext()));
-        MantraSettings_ItemAdapter listAdapter = new MantraSettings_ItemAdapter(mItemArray, R.layout.mantra_setting_item, R.id.image, false);
+        MantraSettingItemAdapter listAdapter = new MantraSettingItemAdapter(mItemArray, R.layout.mantra_setting_item, R.id.image, false);
         mDragListView.setAdapter(listAdapter, true);
         mDragListView.setCanDragHorizontally(false);
         mDragListView.setCustomDragItem(new MyDragItem(getContext(), R.layout.mantra_setting_item));
