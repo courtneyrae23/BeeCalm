@@ -19,6 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BreathActivity"/>
+        <activity android:name=".MantrasActivity"/>
+        <activity android:name=".SimonActivity"/>
+        <activity android:name=".YogaActivity"/>
+        <activity android:name=".TappingActivity"/>
+        <activity android:name=".BiofeedbackActivity"/>
+
     </application>
 
 </manifest>
