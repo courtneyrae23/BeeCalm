@@ -69,6 +69,20 @@ public class SimonFragment  extends Fragment {
                                 if (((AppCompatActivity) getActivity()).getSupportActionBar() != null) {
                                     ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
                                 }
+                            } else if (e2.getX() - e1.getX() > SWIPE_MIN_DISTANCE
+                                    && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                                fragment = new MantrasFragment();
+                                String title = "Mantras";
+                                if (fragment != null) {
+                                    FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                                    ft.replace(R.id.content_frame, fragment);
+                                    ft.commit();
+                                }
+
+                                // set the toolbar title
+                                if (((AppCompatActivity) getActivity()).getSupportActionBar() != null) {
+                                    ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
+                                }
                             }
                         } catch (Exception e) {
                             // nothing

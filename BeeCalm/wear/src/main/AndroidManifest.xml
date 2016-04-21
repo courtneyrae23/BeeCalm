@@ -6,7 +6,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/bee_green"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault">
@@ -19,6 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BreathActivity"/>
+        <activity android:name=".MantrasActivity"/>
+        <activity android:name=".SimonActivity"/>
+        <activity android:name=".YogaActivity"/>
+        <activity android:name=".TappingActivity"/>
+        <activity android:name=".BiofeedbackActivity"/>
+
     </application>
 
 </manifest>
