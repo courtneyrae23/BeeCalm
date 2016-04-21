@@ -3,8 +3,12 @@ package wecare.beecalm;
         import android.os.Bundle;
         import android.os.Handler;
         import android.support.v4.app.Fragment;
+        import android.support.v4.app.FragmentTransaction;
+        import android.support.v7.app.AppCompatActivity;
         import android.util.Log;
+        import android.view.GestureDetector;
         import android.view.LayoutInflater;
+        import android.view.MotionEvent;
         import android.view.View;
         import android.view.ViewGroup;
         import android.widget.Button;
@@ -32,6 +36,47 @@ public class SimonFragment  extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.simon_view, container, false);
+
+        final GestureDetector gesture = new GestureDetector(getActivity(),
+                new GestureDetector.SimpleOnGestureListener() {
+                    Fragment fragment = null;
+                    @Override
+                    public boolean onDown(MotionEvent e) {
+                        return true;
+                    }
+
+                    @Override
+                    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+                                           float velocityY) {
+                        Log.i("Respond", "onFling has been called!");
+                        final int SWIPE_MIN_DISTANCE = 120;
+                        final int SWIPE_MAX_OFF_PATH = 250;
+                        final int SWIPE_THRESHOLD_VELOCITY = 200;
+                        try {
+                            if (Math.abs(e1.getY() - e2.getY()) > SWIPE_MAX_OFF_PATH)
+                                return false;
+                            if (e1.getX() - e2.getX() > SWIPE_MIN_DISTANCE
+                                    && Math.abs(velocityX) > SWIPE_THRESHOLD_VELOCITY) {
+                                fragment = new YogaFragment();
+                                String title  = "Yoga";
+                                if (fragment != null) {
+                                    FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                                    ft.replace(R.id.content_frame, fragment);
+                                    ft.commit();
+                                }
+
+                                // set the toolbar title
+                                if (((AppCompatActivity) getActivity()).getSupportActionBar() != null) {
+                                    ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(title);
+                                }
+                            }
+                        } catch (Exception e) {
+                            // nothing
+                        }
+                        return super.onFling(e1, e2, velocityX, velocityY);
+                    }
+                });
+
         one = (Button) view.findViewById(R.id.one);
         one.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -42,6 +87,13 @@ public class SimonFragment  extends Fragment {
                 } else {
                     contGame();
                 }
+            }
+        });
+
+        one.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return gesture.onTouchEvent(event);
             }
         });
 
@@ -58,6 +110,13 @@ public class SimonFragment  extends Fragment {
             }
         });
 
+        two.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return gesture.onTouchEvent(event);
+            }
+        });
+
         three = (Button) view.findViewById(R.id.three);
         three.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -68,6 +127,13 @@ public class SimonFragment  extends Fragment {
                 } else {
                     contGame();
                 }
+            }
+        });
+
+        three.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return gesture.onTouchEvent(event);
             }
         });
 
@@ -84,6 +150,13 @@ public class SimonFragment  extends Fragment {
             }
         });
 
+        four.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return gesture.onTouchEvent(event);
+            }
+        });
+
         pattern = makePattern(counter);
         tempPattern = new ArrayList<Integer>(pattern);
         final Handler handler = new Handler();
@@ -95,6 +168,9 @@ public class SimonFragment  extends Fragment {
                 showPattern(pattern);
             }
         }, 1000);
+
+
+
         return view;
     }
 
